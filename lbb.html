@@ -7,8 +7,34 @@
   <title>送给丽宝宝的网站</title>
 </head>
 <style>
+  #aaaa {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #aaaa span {
+    display: inline-block;
+    border-radius: 4px;
+    height: 34px;
+    margin-top: 27px;
+    width: 80px;
+    background: #f05159;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   body {
-    background-color: #000;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     margin: 0;
     overflow: hidden;
     background-repeat: no-repeat;
@@ -27,7 +53,8 @@
     margin-top: -48px;
     font-size: 12px;
   }
-/* 
+
+  /* 
   .b {
     left: 50%;
     top: 50%;
@@ -56,13 +83,32 @@
 </style>
 
 <body>
-  <div class="mohao">
-    <h1 class="text-gradient a" data-text="丽宝宝你今天辛苦啦,如果觉得累了我随时在,我会永远陪着你。我喜欢看你笑的样子，你每次笑的都很甜。所以我希望你累的时候知道有我在，能会心一笑。加油丽宝宝ヾ(◍°∇°◍)ﾉﾞ">丽宝宝你今天辛苦啦,如果觉得累了我随时在,我会永远陪着你。我喜欢看你笑的样子，你每次笑的都很甜。所以我希望你累的时候知道有我在，能会心一笑。加油丽宝宝ヾ(◍°∇°◍)ﾉﾞ</h1>
+  <div id="aaaa" onclick="start()">
+    <span>进入</span>
+  </div>
+  <div id="mohao">
+    <h1 class="text-gradient a"
+      data-text="丽宝宝你今天辛苦啦,如果觉得累了我随时在,我会永远陪着你。我喜欢看你笑的样子，你每次笑的都很甜。所以我希望你累的时候知道有我在，能会心一笑。加油丽宝宝ヾ(◍°∇°◍)ﾉﾞ">
+      丽宝宝你今天辛苦啦,如果觉得累了我随时在,我会永远陪着你。我喜欢看你笑的样子，你每次笑的都很甜。所以我希望你累的时候知道有我在，能会心一笑。加油丽宝宝ヾ(◍°∇°◍)ﾉﾞ</h1>
     <!-- <h1 class="text-gradient b" data-text="虽然我可能帮不了你什么">虽然我可能帮不了你什么</h1>
     <h1 class="text-gradient c" data-text="但我会永远陪着你">但我会永远陪着你</h1> -->
     <canvas id="canvas" width="390" height="844"></canvas>
+    <!-- <audio src="./ninxia.mp3" loop="loop" controls="controls" autoplay="autoplay"></audio> -->
+    <audio id="music1" controls="controls" preload autoplay="autoplay" loop="loop">
+      <source src="./ninxia.mp3" type="audio/mpeg" />
+    </audio>
   </div>
   <script>
+
+    function start() {
+      var aaaa = document.getElementById('aaaa');
+      aaaa.style.display = 'none'
+      var audio = document.getElementById('music1');
+      audio.play();
+    }
+
+
+
     var canvas = document.getElementById("canvas");
 
     canvas.width = window.innerWidth;
