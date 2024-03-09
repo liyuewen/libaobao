@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>丽宝宝</title>
+  <title>送给丽宝宝的网站</title>
 </head>
 <style>
   body {
@@ -16,12 +16,33 @@
 
   .text-gradient {
     position: fixed;
+    text-align: center;
+    width: 120px;
+  }
+
+  .a {
     left: 50%;
     top: 50%;
-    margin-left: -54px;
-    margin-top: -18px;
+    margin-left: -60px;
+    margin-top: -32px;
     font-size: 12px;
   }
+/* 
+  .b {
+    left: 50%;
+    top: 50%;
+    margin-left: -60px;
+    margin-top: -12px;
+    font-size: 12px;
+  }
+
+  .c {
+    left: 50%;
+    top: 50%;
+    margin-left: -60px;
+    margin-top: 23px;
+    font-size: 12px;
+  } */
 
   .text-gradient[data-text]::after {
     content: attr(data-text);
@@ -36,7 +57,9 @@
 
 <body>
   <div class="mohao">
-    <h1 class="text-gradient" data-text="丽宝宝你今天辛苦啦">丽宝宝你今天辛苦啦</h1>
+    <h1 class="text-gradient a" data-text="丽宝宝你今天辛苦啦虽然我可能帮不了你什么但我会永远陪着你">丽宝宝你今天辛苦啦虽然我可能帮不了你什么但我会永远陪着你</h1>
+    <!-- <h1 class="text-gradient b" data-text="虽然我可能帮不了你什么">虽然我可能帮不了你什么</h1>
+    <h1 class="text-gradient c" data-text="但我会永远陪着你">但我会永远陪着你</h1> -->
     <canvas id="canvas" width="390" height="844"></canvas>
   </div>
   <script>
